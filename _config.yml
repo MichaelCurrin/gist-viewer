@@ -1,0 +1,33 @@
+### Site metadata ###
+
+title: Jekyll Blog Demo
+description: "Minimal base for a static website built with Jekyll and a theme"
+
+email:
+twitter_username:
+github_username: MichaelCurrin
+
+### Build settings ###
+
+url: "https://michaelcurrin.github.io"
+baseurl: "/jekyll-blog-demo"
+
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+permalink: pretty
+
+exclude:
+  - LICENSE
+  - README.md
+  - Makefile
+
+  # In Jekyll 4, these are always excluded, so you never have to add them to your list.
+  # But in Jekyll 3, these are needed:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
