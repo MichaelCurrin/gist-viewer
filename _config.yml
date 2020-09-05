@@ -1,7 +1,7 @@
 ### Site metadata ###
 
-title: Jekyll Blog Demo
-description: "Minimal base for a static website built with Jekyll and a theme"
+title: Gist Viewer
+description: A list of all of my gists
 
 email:
 twitter_username:
@@ -10,15 +10,9 @@ github_username: MichaelCurrin
 ### Build settings ###
 
 url: "https://michaelcurrin.github.io"
-baseurl: "/jekyll-blog-demo"
+baseurl: "/gist-viewer"
 
 theme: minima
-
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-
-permalink: pretty
 
 exclude:
   - LICENSE
@@ -29,5 +23,4 @@ exclude:
   # But in Jekyll 3, these are needed:
   - Gemfile
   - Gemfile.lock
-  - node_modules
   - vendor/
