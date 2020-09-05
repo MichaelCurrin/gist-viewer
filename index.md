@@ -11,7 +11,7 @@ Profile: [{{ site.github_username }}](https://github.com/{{ site.github_username
 
 ## Gists
 
-See all public gists below or go to user's [all gists](https://gists.github.com/{{ site.github_username }}) page on GitHub.
+See my public gists below, or browse [gists](https://gists.github.com/{{ site.github_username }}) directly on GitHub.
 
 {% raw %}
 <div id="target">Loading...</div>
