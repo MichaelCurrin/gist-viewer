@@ -1,21 +1,40 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-#
-# Note that title left unset here as its not needed for the homepage.
-# This avoids showing it on the front (though that could be adapted in a layout too).
-
 layout: home
 ---
 
-Welcome to my **Jekyll Blog Demo**
+> {{ site.description }}
 
-> Minimal base for a static website built with Jekyll and a theme
+## GitHub user
 
-<!-- Adding div align="center" converted to plain markdown unfortunately so let that out -->
+Profile: [{{ site.github_username }}](https://github.com/{{ site.github_username }})
 
-[![Use this template](https://img.shields.io/badge/Use_this_template-2ea44f?style=for-the-badge)](https://github.com/MichaelCurrin/jekyll-blog-demo/generate)
 
-[![Repo Jekyll Blog Demo](https://img.shields.io/badge/Repo-Jekyll_Blog_Demo-blue?logo=github)](https://github.com/MichaelCurrin/jekyll-blog-demo)
+## Gists
 
-Hosted using [GitHub Pages](https://pages.github.com/). Built with Jekyll [jekyllrb.com](https://jekyllrb.com).
+See all public gists below or go to user's [all gists](https://gists.github.com/{{ site.github_username }}) page on GitHub.
+
+{% raw %}
+<div id="target">Loading...</div>
+<script id="template" type="x-tmpl-mustache">
+    <ol>
+    {{#gists}}
+        <li>
+            <a href="{{ html_url }}">link</a> <span>{{ description }}</span>
+        </li>
+    {{/gists}}
+    </ol>
+</script>
+{% endraw %}
+
+<script>
+    renderGists(
+        '{{ site.github_username }}'
+    )
+</script>
+
+
+## Repo
+
+Find this repo on GitHub - fork it and customize with your own username.
+
+[{{ site.github_username }}{{ site.baseurl }}](https://github.com/{{ site.github_username }}{{ site.baseurl }})
