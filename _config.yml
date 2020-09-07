@@ -1,10 +1,9 @@
 ### Site metadata ###
 
 title: Gist Viewer
-description: A list of all of my gists
+description: A dynamic list of all my gists
 
-email:
-twitter_username:
+twitter_username: MichaelCurrin
 github_username: MichaelCurrin
 
 ### Build settings ###
