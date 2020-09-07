@@ -8,7 +8,7 @@
 [![Theme Minima](https://img.shields.io/badge/Theme-Minima-blue)](https://github.com/jekyll/minima)
 [![Made with Moustache](https://img.shields.io/npm/v/mustache?label=mustache)](https://www.npmjs.com/package/mustache)
 
-A simple site that gets all my gists from the [GitHub REST API](https://docs.github.com/en/rest) and renders them on a page using [moustache.js](https://www.npmjs.com/package/mustache) templating.
+A simple site that gets all my gists from the [GitHub REST API](https://docs.github.com/en/rest) and renders them on a page using [mustache.js](https://www.npmjs.com/package/mustache) templating.
 
 
 <div align="center">
