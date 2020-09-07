@@ -1,5 +1,5 @@
 # Gist Viewer
-> A one-page site listing all of my gists
+> A dynamic list of all my gists
 
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/gist-viewer)](https://github.com/MichaelCurrin/gist-viewer/tags/?include_prereleases&sort=semver)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue)](#license)
