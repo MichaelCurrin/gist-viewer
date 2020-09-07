@@ -35,6 +35,10 @@ See my public gists below, or browse [gists](https://gists.github.com/{{ site.gi
 
 ## Repo
 
-Find this repo on GitHub - fork it and customize with your own username.
+This project is open-sourced!
 
-[{{ site.github_username }}{{ site.baseurl }}](https://github.com/{{ site.github_username }}{{ site.baseurl }})
+See the repo on GitHub:
+
+- [{{ site.github_username }}{{ site.baseurl }}](https://github.com/{{ site.github_username }}{{ site.baseurl }})
+
+To get your own site setup like this, fork it, customize with your own username and deploy it.
