@@ -4,14 +4,12 @@ layout: home
 
 > {{ site.description }}
 
-## GitHub user
-
-Profile: [{{ site.github_username }}](https://github.com/{{ site.github_username }})
+When viewing multiple pages of my gists directly on GitHub becomes impractical, a one-page solution keeps thing easy to manage.
 
 
 ## Gists
 
-See my public gists below, or browse [gists](https://gists.github.com/{{ site.github_username }}) directly on GitHub.
+See my public gists below.
 
 {% raw %}
 <div id="target">Loading...</div>
@@ -27,18 +25,22 @@ See my public gists below, or browse [gists](https://gists.github.com/{{ site.gi
 {% endraw %}
 
 <script>
-    renderGists(
-        '{{ site.github_username }}'
-    )
+    renderGists('{{ site.github_username }}');
 </script>
+
+
+## Links
+
+- [{{ site.github_username }}](https://gists.github.com/{{ site.github_username }})'s gists on GH
+- [{{ site.github_username }}](https://github.com/{{ site.github_username }}) GH account
 
 
 ## Repo
 
 This project is open-sourced!
 
-See the repo on GitHub:
+Find the repo on GitHub:
 
 - [{{ site.github_username }}{{ site.baseurl }}](https://github.com/{{ site.github_username }}{{ site.baseurl }})
 
-To get your own site setup like this, fork it, customize with your own username and deploy it.
+To get your own site setup like this one, you can fork it, customize it with your own username and deploy it.
