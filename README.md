@@ -8,10 +8,12 @@
 [![Theme Minima](https://img.shields.io/badge/Theme-Minima-blue)](https://github.com/jekyll/minima)
 [![Made with Moustache](https://img.shields.io/npm/v/mustache?label=mustache)](https://www.npmjs.com/package/mustache)
 
-A simple site that fetches all my gists from the [GitHub REST API](https://docs.github.com/en/rest) and renders them on a page using [mustache.js](https://www.npmjs.com/package/mustache) templating.
+## Features
 
-It is always up to date as the fetch happens on the frontend.
-
+- A simple site that fetches all of a user's gists from the [GitHub REST API](https://docs.github.com/en/rest)
+- It renders them on a page using [mustache.js](https://www.npmjs.com/package/mustache) templating.
+- It is always up to date as the fetch happens on the frontend.
+- Easy to fork and [customize](#customize).
 
 <div align="center">
 
@@ -22,7 +24,7 @@ It is always up to date as the fetch happens on the frontend.
 
 ## Preview
 
-![Sample screenshot](/sample.png)
+[![Sample screenshot](/sample.png)](https://michaelcurrin.github.io/gist-viewer/)
 
 
 ## Installation
@@ -61,7 +63,7 @@ Open in the browser:
 - http://localhost:4000/gist-viewer/
 
 
-## Customize this repo
+## Customize
 
 Fork this repo on GitHub.
 
