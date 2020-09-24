@@ -12,16 +12,19 @@ When viewing multiple pages of my gists directly on GitHub becomes impractical, 
 See my public gists below.
 
 {% raw %}
+
 <div id="target">Loading...</div>
+
 <script id="template" type="x-tmpl-mustache">
     <ol>
-    {{#gists}}
+    {{ #gists }}
         <li>
-            <a href="{{ html_url }}">link</a> <span>{{ description }}</span>
+            <a href="{{ html_url }}">link</a> - <span>{{ description }}</span>
         </li>
-    {{/gists}}
+    {{ /gists }}
     </ol>
 </script>
+
 {% endraw %}
 
 <script>
@@ -29,13 +32,13 @@ See my public gists below.
 </script>
 
 
-## Links
+## User links
 
 - [{{ site.github_username }}](https://gists.github.com/{{ site.github_username }})'s gists on GH
 - [{{ site.github_username }}](https://github.com/{{ site.github_username }}) GH account
 
 
-## Repo
+## About
 
 This project is open-sourced!
 
