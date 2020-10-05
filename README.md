@@ -1,5 +1,5 @@
 # Gist Viewer
-> A dynamic list of all my gists
+> A simple site to show a live list of all my public gists 
 
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/gist-viewer)](https://github.com/MichaelCurrin/gist-viewer/tags/?include_prereleases&sort=semver)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue)](#license)
@@ -8,12 +8,14 @@
 [![Theme Minima](https://img.shields.io/badge/Theme-Minima-blue)](https://github.com/jekyll/minima)
 [![Made with Moustache](https://img.shields.io/npm/v/mustache?label=mustache)](https://www.npmjs.com/package/mustache)
 
+
 ## Features
 
-- A simple site that fetches all of a user's gists from the [GitHub REST API](https://docs.github.com/en/rest)
-- It renders them on a page using [mustache.js](https://www.npmjs.com/package/mustache) templating.
-- It is always up to date as the fetch happens on the frontend.
+- Fetch all of a user's gists from the [GitHub REST API](https://docs.github.com/en/rest) using JS
+- Always shows latest data on a page load
+- Renders gists on on a page using [mustache.js](https://www.npmjs.com/package/mustache) templating.
 - Easy to fork and [customize](#customize).
+- Built on Jekyll and GH Pages
 
 <div align="center">
 
