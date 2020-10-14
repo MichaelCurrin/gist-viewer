@@ -1,12 +1,23 @@
 # Gist Viewer
 > A simple site to show a live list of all my public gists 
 
+<div align="center">
+
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/gist-viewer)](https://github.com/MichaelCurrin/gist-viewer/tags/?include_prereleases&sort=semver)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue)](#license)
 
 [![Made with Jekyll](https://img.shields.io/badge/Jekyll-3.9-blue?logo=jekyll)](https://jekyllrb.com)
 [![Theme Minima](https://img.shields.io/badge/Theme-Minima-blue)](https://github.com/jekyll/minima)
 [![Made with Moustache](https://img.shields.io/npm/v/mustache?label=mustache)](https://www.npmjs.com/package/mustache)
+
+</div>
+
+
+<div align="center">
+
+[![View site GH Pages](https://img.shields.io/badge/View_site-GH_Pages-green?style=for-the-badge)](https://michaelcurrin.github.io/gist-viewer/)
+
+</div>
 
 
 ## Features
@@ -16,12 +27,6 @@
 - Renders gists on on a page using [mustache.js](https://www.npmjs.com/package/mustache) templating.
 - Easy to fork and [customize](#customize).
 - Built on Jekyll and GH Pages
-
-<div align="center">
-
-[![View site GH Pages](https://img.shields.io/badge/View_site-GH_Pages-green?style=for-the-badge)](https://michaelcurrin.github.io/gist-viewer/)
-
-</div>
 
 
 ## Preview
