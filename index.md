@@ -34,7 +34,7 @@ See my public gists below.
 
 ## User links
 
-- [{{ site.github_username }}](https://gists.github.com/{{ site.github_username }})'s gists on GH
+- [{{ site.github_username }}](https://gist.github.com/{{ site.github_username }})'s gists on GH
 - [{{ site.github_username }}](https://github.com/{{ site.github_username }}) GH account
 
 
