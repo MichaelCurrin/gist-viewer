@@ -32,7 +32,7 @@
 
 ### Install system dependencies
 
-Install Ruby and Bundler - see [instructions](https://gist.github.com/MichaelCurrin/3af38fca4e2903cdedfb8402c18b2936)
+Install Ruby and Bundler - follow these [instructions](https://gist.github.com/MichaelCurrin/3af38fca4e2903cdedfb8402c18b2936).
 
 ### Clone
 
@@ -45,7 +45,7 @@ $ cd gist-viewer
 
 ### Install project dependencies
 
-Install local gems.
+Install project gems.
 
 ```sh
 $ make install
@@ -53,7 +53,8 @@ $ make install
 
 
 ## Usage
-> Start local dev server
+
+Start a local dev server
 
 ```sh
 $ make serve
@@ -66,13 +67,10 @@ Open in the browser:
 
 ## Customize
 
-Fork this repo on GitHub.
-
-Customize the [\_config.yml](/_config.yml) file with your username.
-
-Enable _GitHub Pages_ under Settings.
-
-Wait for your site to build.
+1. Fork this repo on GitHub.
+2. Customize the [\_config.yml](/_config.yml) file with your username.
+3. Enable _GitHub Pages_ under Settings.
+4. Wait for your site to build then check your GitHub Pages URL in Settings or the _environment_ tab.
 
 
 ## License
