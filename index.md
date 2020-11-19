@@ -44,6 +44,8 @@ This project is open-sourced!
 
 Find the repo on GitHub:
 
-- [{{ site.github_username }}{{ site.baseurl }}](https://github.com/{{ site.github_username }}{{ site.baseurl }})
+[![MichaelCurrin - gist-viewer](https://img.shields.io/static/v1?label=MichaelCurrin&message=gist-viewer&color=blue&logo=github)](https://github.com/MichaelCurrin/gist-viewer)
 
-To get your own site setup like this one, you can fork it, customize it with your own username and deploy it.
+To get your own site setup like this one, it is easy to fork and deploy using your own username. Just follow the instructions in the `README.md`.
+
+If you want to contribute to make this project better, issues and pull requests are welcome.
