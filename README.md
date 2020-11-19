@@ -1,8 +1,8 @@
 # Gist Viewer
 > A simple site to show a live list of all my public gists 
 
-[![Made with Jekyll](https://img.shields.io/badge/Jekyll-3.9-blue?logo=jekyll)](https://jekyllrb.com)
-[![Theme Minima](https://img.shields.io/badge/theme-Minima-blue)](https://github.com/jekyll/minima)
+[![Made with Jekyll](https://img.shields.io/badge/jekyll-3.9-blue?logo=jekyll)](https://jekyllrb.com)
+[![Theme Minima](https://img.shields.io/badge/theme-minima-blue)](https://github.com/jekyll/minima)
 [![Made with Moustache](https://img.shields.io/npm/v/mustache?label=mustache)](https://www.npmjs.com/package/mustache)
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/gist-viewer)](https://github.com/MichaelCurrin/gist-viewer/tags/?include_prereleases&sort=semver)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue)](#license)
@@ -16,11 +16,11 @@
 
 ## Features
 
-- Fetch all of a user's gists from the [GitHub REST API](https://docs.github.com/en/rest) using JS
-- Always shows latest data on a page load
-- Renders gists on on a page using [mustache.js](https://www.npmjs.com/package/mustache) templating.
+- Fetch all of a user's gists from the [GitHub REST API](https://docs.github.com/en/rest) using JS.
+- Always shows latest data - refresh the page to update.
+- Render gists on on a page using [mustache.js](https://www.npmjs.com/package/mustache) templating.
 - Easy to fork and [customize](#customize).
-- Built on Jekyll and GH Pages
+- Built on Jekyll and hosted on GH Pages.
 
 
 ## Preview
