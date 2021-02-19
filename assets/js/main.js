@@ -1,5 +1,6 @@
-function makeGistsUrl(username)
+function makeGistsUrl(username) {
   return `https://api.github.com/users/${username}/gists?per_page=100`;
+}
 
 function renderTemplate(data) {
   const template = document.getElementById('template').innerHTML;
