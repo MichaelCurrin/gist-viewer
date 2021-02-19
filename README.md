@@ -1,4 +1,4 @@
-# Gist Viewer 🖥 🔭
+# Gist Viewer 👨‍💻 🔭
 > A simple site to show a live list of all my public gists 
 
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/gist-viewer)](https://github.com/MichaelCurrin/gist-viewer/tags/?include_prereleases&sort=semver)
