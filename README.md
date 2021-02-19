@@ -7,9 +7,17 @@
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/gist-viewer)](https://github.com/MichaelCurrin/gist-viewer/tags/?include_prereleases&sort=semver)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue)](#license)
 
+
+## Preview
+
+[![Sample screenshot](/sample.png)](https://michaelcurrin.github.io/gist-viewer/)
+
+
+## Web app
+
 <div align="center">
 
-[![View site GH Pages](https://img.shields.io/badge/View_site-GH_Pages-green?style=for-the-badge)](https://michaelcurrin.github.io/gist-viewer/)
+[![View site GH Pages](https://img.shields.io/badge/View_site-Gist_viewer-2ea44f?style=for-the-badge)](https://michaelcurrin.github.io/gist-viewer/)
 
 </div>
 
@@ -21,11 +29,6 @@
 - Render gists on on a page using [mustache.js](https://www.npmjs.com/package/mustache) templating.
 - Easy to fork and [customize](#customize).
 - Built on Jekyll and hosted on GH Pages.
-
-
-## Preview
-
-[![Sample screenshot](/sample.png)](https://michaelcurrin.github.io/gist-viewer/)
 
 
 ## Installation
@@ -43,7 +46,7 @@ $ git clone git@github.com:MichaelCurrin/gist-viewer.git
 $ cd gist-viewer
 ```
 
-### Install project dependencies
+### Install project packages
 
 Install project gems.
 
@@ -54,7 +57,7 @@ $ make install
 
 ## Usage
 
-Start a local dev server
+Start a local dev server.
 
 ```sh
 $ make serve
