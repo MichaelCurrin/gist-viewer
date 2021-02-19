@@ -6,7 +6,7 @@ function renderTemplate(data) {
 }
 
 function renderGists(username) {
-  const userGistsUrl = `https://api.github.com/users/${username}/gists`;
+  const userGistsUrl = `https://api.github.com/users/${username}/gists?per_page=100`;
   
   fetch(userGistsUrl)
       .then(res => res.json())
