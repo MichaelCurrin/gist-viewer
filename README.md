@@ -81,6 +81,12 @@ Open in the browser:
 4. Wait for your site to build then check your GitHub Pages URL in Settings or the _environment_ tab.
 
 
+## Development
+
+- [Gists](https://docs.github.com/en/rest/reference/gists) section in the GitHub REST API docs.
+- [GitHub REST](https://michaelcurrin.github.io/dev-resources/resources/version-control/github/rest.html) API in my Dev Resources.
+
+
 ## License
 
-Released under [MIT](/LICENSE).
+Released under [MIT](/LICENSE) by [@MichaelCurrin](https://github.com/MichaelCurrin).
