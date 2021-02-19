@@ -1,7 +1,7 @@
 default: install
 
-help:
-	@egrep '^\S|^$$' Makefile
+h help:
+	@grep '^[a-z]' Makefile
 
 install:
 	bundle config set --local path vendor/bundle
@@ -12,3 +12,6 @@ upgrade:
 
 s serve:
 	bundle exec jekyll serve --trace --livereload
+
+build:
+	JEKYLL_ENV=production bundle exec jekyll build --trace
