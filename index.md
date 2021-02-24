@@ -11,6 +11,8 @@ When viewing multiple pages of my gists directly on GitHub becomes impractical, 
 
 See my public gists below.
 
+<!-- Mustache template - use raw tag because Mustache syntax looks like Liquid but must not get evaluated. -->
+
 {% raw %}
 
 <div id="target">Loading...</div>
