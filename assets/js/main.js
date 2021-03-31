@@ -12,6 +12,8 @@ function renderTemplate(data) {
 function renderGists(username) {
   const gistsUrl = makeGistsUrl(username);
   
+  console.debug(gistsUrl);
+  
   fetch(gistsUrl)
       .then(res => res.json())
       .then(json => renderTemplate({ gists: json }));
