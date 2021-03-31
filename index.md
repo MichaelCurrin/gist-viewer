@@ -15,7 +15,10 @@ See my public gists below.
 
 {% raw %}
 
-<div id="target">Loading...</div>
+<div id="target">
+    <p>User: {{ site.github_username }}</p>
+    <p>Fetching gists...</p>
+</div>
 
 <script id="template" type="x-tmpl-mustache">
     <ol>
