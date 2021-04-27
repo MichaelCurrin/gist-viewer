@@ -1,7 +1,7 @@
 {
-    "files.associations": {
-        "*.html": "liquid",
-        "*.md": "liquid",
-        "README.md": "markdown",
-    },
+  "files.associations": {
+    "*.html": "liquid",
+    "*.md": "liquid",
+    "README.md": "markdown",
+  }
 }
