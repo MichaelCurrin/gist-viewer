@@ -5,16 +5,16 @@ function makeGistsUrl(username) {
 function renderTemplate(data) {
   const template = document.getElementById('template').innerHTML;
   const rendered = Mustache.render(template, data);
-  
+
   document.getElementById('target').innerHTML = rendered;
 }
 
 function renderGists(username) {
   const gistsUrl = makeGistsUrl(username);
-  
+
   console.debug(gistsUrl);
-  
+
   fetch(gistsUrl)
-      .then(res => res.json())
-      .then(json => renderTemplate({ gists: json }));
+    .then(res => res.json())
+    .then(json => renderTemplate({ gists: json }));
 }
