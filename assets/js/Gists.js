@@ -23,18 +23,23 @@ const Gists = {
       errored: false,
     };
   },
-  async mounted() {
-    const url = gistsUrl(this.username)
+  methods: {
+    async process() {
+      const url = gistsUrl(this.username)
 
-    try {
-      const resp = await fetch(url);
-      this.gists = await resp.json();
-    } catch (err) {
-      console.error(`Unable to fetch currency data. Error: ${err}`);
-      this.errored = true;
-    } finally {
-      this.loading = false;
+      try {
+        const resp = await fetch(url);
+        this.gists = await resp.json();
+      } catch (err) {
+        console.error(`Unable to fetch Gists API data. Error: ${err}`);
+        this.errored = true;
+      } finally {
+        this.loading = false;
+      }
     }
+  },
+  mounted() {
+    this.process()
   },
   template: `
     <section v-if="errored">
