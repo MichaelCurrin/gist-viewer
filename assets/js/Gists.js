@@ -12,6 +12,7 @@ function gistsUrl(username, limit = 100) {
 }
 
 const Gists = {
+  name: 'Gists',
   props: {
     username: { type: String, required: true }
   },
@@ -42,15 +43,16 @@ const Gists = {
       </p>
     </section>
 
-    <section v-else>
-      <div v-if="loading">
+    <ul v-else>
+      <p v-if="loading">
         Loading...
-      </div>
+      </p>
 
-      <div v-else v-for="gist in gists" class="gist">
-        {{ gist }}
-      </div>
-    </section>
+      <li v-else v-for="gist in gists" class="gist">
+          <a :href="gist.url">Link</a> - {{ gist.description }}
+        </>
+      </li>
+    </ul>
   `,
 };
 
