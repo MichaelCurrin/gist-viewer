@@ -1,21 +1,33 @@
 /**
  * Gists module.
  */
-const PRICES_API_URL = "https://api.coindesk.com/v1/bpi/currentprice.json";
+
+/**
+ * Build API URL for getting all gists for a user.
+ *
+ * The API sets a max of up to 100 items per page. This can be overcome by extending this with paging, if you have over 100 gists.
+ */
+function gistsUrl(username, limit = 100) {
+  return `https://api.github.com/users/${username}/gists?per_page=${limit}`;
+}
 
 const Gists = {
+  props: {
+    username: { type: String, required: true }
+  },
   data() {
     return {
-      info: null,
+      gists: null,
       loading: true,
       errored: false,
     };
   },
   async mounted() {
+    const url = gistsUrl(this.username)
+
     try {
-      const resp = await fetch(PRICES_API_URL);
-      const data = await resp.json();
-      this.info = data.bpi;
+      const resp = await fetch(url);
+      this.gists = await resp.json();
     } catch (err) {
       console.error(`Unable to fetch currency data. Error: ${err}`);
       this.errored = true;
@@ -26,7 +38,7 @@ const Gists = {
   template: `
     <section v-if="errored">
       <p>
-        We're sorry, we're unable to retrieve this information at the moment, please try again later
+        Failed to fetch gists data - check your network connection and that the GitHub username is valid.
       </p>
     </section>
 
@@ -35,15 +47,8 @@ const Gists = {
         Loading...
       </div>
 
-      <div v-else v-for="currency in info" class="currency">
-        {{ currency.description }}:
-
-        <span>
-          <b>
-            <span v-html="currency.symbol"> </span>
-            {{ currency.rate_float.toFixed(2) }}
-          </b>
-        </span>
+      <div v-else v-for="gist in gists" class="gist">
+        {{ gist }}
       </div>
     </section>
   `,
