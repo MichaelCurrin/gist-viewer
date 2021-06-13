@@ -44,7 +44,7 @@ const app = createApp({
     <p>
       <i>Every time you load or refresh this page, the latest info will be pulled in.</i>
     </p>
-    <Gists id="gist-list" :username="username"></Gists>
+    <Gists id="gists-widget" :username="username"></Gists>
   `,
 });
 
