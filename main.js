@@ -3,6 +3,7 @@
  */
 import { createApp } from "https://unpkg.com/vue@3.0.7/dist/vue.esm-browser.js";
 import Gists from "./Gists.js";
+import GitHubCorner from "./GitHubCorner.js";
 
 const USERNAME = "MichaelCurrin";
 const REPO_NAME = "gist-viewer";
@@ -10,6 +11,7 @@ const REPO_NAME = "gist-viewer";
 const app = createApp({
   components: {
     Gists,
+    GitHubCorner,
   },
   data() {
     return {
@@ -25,6 +27,8 @@ const app = createApp({
     },
   },
   template: `
+    <GitHubCorner :repoUrl="repoUrl"></GitHubCorner>
+
     <h2>GitHub username</h2>
     <p>
       <a :href="profileUrl">
