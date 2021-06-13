@@ -7,8 +7,8 @@
   --pale: #f8f8f8;
 }
 
-.github-corner>svg {
-  fill: var(--highlight) !important
+.github-corner > svg {
+  fill: var(--highlight) !important;
 }
 
 body {
