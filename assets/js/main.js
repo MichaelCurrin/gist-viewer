@@ -1,19 +1,51 @@
-function gistsUrl(username, limit = 100) {
-  return `https://api.github.com/users/${username}/gists?per_page=${limit}`;
-}
+/**
+ * Main app module.
+ */
+import { createApp } from "https://unpkg.com/vue@3.0.7/dist/vue.esm-browser.js";
+import Gists from "./Gists.js";
+import GitHubCorner from "./GitHubCorner.js";
 
-function renderTemplate(targetElId, data) {
-  const template = document.getElementById('template').innerHTML;
-  const rendered = Mustache.render(template, data);
+const USERNAME = "MichaelCurrin";
+const REPO_NAME = "gist-viewer";
 
-  document.getElementById(targetElId).innerHTML = rendered;
-}
+const app = createApp({
+  components: {
+    Gists,
+    GitHubCorner,
+  },
+  data() {
+    return {
+      username: USERNAME,
+    };
+  },
+  computed: {
+    profileUrl() {
+      return `https://github.com/${this.username}`;
+    },
+    repoUrl() {
+      return `${this.profileUrl}/${REPO_NAME}`;
+    },
+    gistsUrl() {
+      return `https://gist.github.com/${this.profileUrl}`
+    }
+  },
+  template: `
+    <GitHubCorner :repoUrl="repoUrl"></GitHubCorner>
 
-async function renderGists(username) {
-  const url = gistsUrl(username);
-  console.debug(url);
+    <h2>User links</h2>
+    <p>Username: <b>@{{ username }}</b></p>
+    <p>
+      <a :href="profileUrl">GitHub profile</a>
+      {{ }}
+      <a :href="gistsUrl">Gists</a>
+    </p>
 
-  const resp = await fetch(url);
-  const json = await resp.json();
-  renderTemplate('target', { gists: json });
-}
+    <h2>List of Gists</h2>
+    <p>
+      <i>Every time you load or refresh this page, the latest info will be pulled in.</i>
+    </p>
+    <Gists :username="username"></Gists>
+  `,
+});
+
+app.mount("#app");
