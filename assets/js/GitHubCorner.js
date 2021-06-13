@@ -1,4 +1,5 @@
 const GitHubCorner = {
+  name: 'GitHubCorner',
   props: {
     repoUrl: { type: String, required: true }
   },
