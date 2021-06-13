@@ -25,18 +25,25 @@ const app = createApp({
     repoUrl() {
       return `${this.profileUrl}/${REPO_NAME}`;
     },
+    gistsUrl() {
+      return `https://gist.github.com/${this.profileUrl}`
+    }
   },
   template: `
     <GitHubCorner :repoUrl="repoUrl"></GitHubCorner>
 
-    <h2>GitHub username</h2>
+    <h2>User links</h2>
+    <p>Username: <b>@{{ username }}</b></p>
     <p>
-      <a :href="profileUrl">
-        @{{ username }}
-      </a>
+      <a :href="profileUrl">GitHub profile</a>
+      {{ }}
+      <a :href="gistsUrl">Gists</a>
     </p>
 
-    <h2>Gists</h2>
+    <h2>List of Gists</h2>
+    <p>
+      <i>Every time you load or refresh this page, the latest info will be pulled in.</i>
+    </p>
     <Gists></Gists>
   `,
 });
