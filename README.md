@@ -40,9 +40,9 @@
 ## Customize
 
 1. Fork this repo on GitHub.
-2. Customize the [main.js](main.js) file with your username.
-3. Enable _GitHub Pages_ under Settings.
-4. Wait for your site to build then check your GitHub Pages URL in Settings or the _environment_ tab.
+2. Customize the [main.js](/assets/js/main.js) module's global constants with your username.
+3. Under your GitHub repo's _Settings_, go to _Pages_ and enable _GitHub Pages_.
+4. Wait for your site to build then check your GitHub Pages URL in _Settings_ or the _Environment_ tab.
 
 
 ## Development
