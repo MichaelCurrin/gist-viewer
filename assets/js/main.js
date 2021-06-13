@@ -36,7 +36,7 @@ const app = createApp({
     <p>Username: <b>@{{ username }}</b></p>
     <p>
       View <a :href="profileUrl">Profile</a>
-      {{ }}
+      |
       View <a :href="gistsUrl">Gists</a>
     </p>
 
