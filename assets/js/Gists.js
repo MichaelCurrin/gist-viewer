@@ -24,22 +24,27 @@ const Gists = {
     };
   },
   methods: {
-    async process() {
+    async fetchGists() {
       const url = gistsUrl(this.username)
 
       try {
         const resp = await fetch(url);
-        this.gists = await resp.json();
+        const gists = await resp.json();
+        this.gists = gists;
       } catch (err) {
         console.error(`Unable to fetch Gists API data. Error: ${err}`);
         this.errored = true;
       } finally {
         this.loading = false;
       }
+    },
+    sortBy(field) {
+      this.gists.sort((a, b) => a[field] > b[field] ? 1 : -1);
     }
   },
-  mounted() {
-    this.process()
+  async mounted() {
+    await this.fetchGists()
+    this.sortBy('description')
   },
   template: `
     <section v-if="errored">
@@ -54,8 +59,7 @@ const Gists = {
       </p>
 
       <li v-else v-for="gist in gists" class="gist">
-          <a :href="gist.url">Link</a> - {{ gist.description }}
-        </>
+          <a :href="gist.url">Link</a> - C {{ gist.created_at.slice(0, 10) }} - U {{ gist.updated_at.slice(0, 10) }} - {{ Object.keys(gist.files).length }} files - <b>{{ gist.description }}</b>
       </li>
     </ul>
   `,
