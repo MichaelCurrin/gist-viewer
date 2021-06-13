@@ -35,9 +35,9 @@ const app = createApp({
     <h2>User links</h2>
     <p>Username: <b>@{{ username }}</b></p>
     <p>
-      <a :href="profileUrl">GitHub profile</a>
+      View <a :href="profileUrl">Profile</a>
       {{ }}
-      <a :href="gistsUrl">Gists</a>
+      View <a :href="gistsUrl">Gists</a>
     </p>
 
     <h2>List of Gists</h2>
