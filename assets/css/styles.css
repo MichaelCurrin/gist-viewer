@@ -11,11 +11,11 @@ body {
 }
 
 main {
-  max-width: calc(800px - (30px * 2));
-  margin-right: auto;
+  max-width: calc(1200px - (30px * 2));
   margin-left: auto;
-  padding-right: 30px;
+  margin-right: auto;
   padding-left: 30px;
+  padding-right: 30px;
 }
 
 #gists-widget {
