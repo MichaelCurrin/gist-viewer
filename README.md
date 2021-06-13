@@ -30,7 +30,11 @@
 
 ## Documentation
 
+<div align="center">
+
 [![View - Documentation](https://img.shields.io/badge/View-Documentation-blue?style=for-the-badge)](/docs/)
+
+</div>
 
 
 ## License
