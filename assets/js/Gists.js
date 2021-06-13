@@ -58,9 +58,39 @@ const Gists = {
         Loading...
       </p>
 
-      <li v-else v-for="gist in gists" class="gist">
-          <a :href="gist.url">Link</a> - C {{ gist.created_at.slice(0, 10) }} - U {{ gist.updated_at.slice(0, 10) }} - {{ Object.keys(gist.files).length }} files - <b>{{ gist.description }}</b>
-      </li>
+      <table v-else >
+        <tr>
+          <th>
+            Created
+          </th>
+          <th>
+            Updated
+          </th>
+          <th>
+            Description
+          </th>
+          <th>
+            Files
+          </th>
+
+        </tr>
+        <tr v-for="gist in gists">
+            <td>
+              {{ gist.created_at.slice(0, 10) }}
+            </td>
+            <td>
+            {{ gist.updated_at.slice(0, 10) }}
+            </td>
+            <td>
+              <a :href="gist.html_url">
+                {{ gist.description }}
+              </a>
+            </td>
+            <td>
+              {{ Object.keys(gist.files).length }}
+            </td>
+        </tr>
+      </table>
     </ul>
   `,
 };
