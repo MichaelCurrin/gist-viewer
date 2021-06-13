@@ -1,5 +1,5 @@
-function makeGistsUrl(username) {
-  return `https://api.github.com/users/${username}/gists?per_page=100`;
+function gistsUrl(username, limit = 100) {
+  return `https://api.github.com/users/${username}/gists?per_page=${limit}`;
 }
 
 function renderTemplate(data) {
@@ -9,12 +9,12 @@ function renderTemplate(data) {
   document.getElementById('target').innerHTML = rendered;
 }
 
-function renderGists(username) {
-  const gistsUrl = makeGistsUrl(username);
+async function renderGists(username) {
+  const url = gistsUrl(username);
 
-  console.debug(gistsUrl);
+  console.debug(url);
 
-  fetch(gistsUrl)
-    .then(res => res.json())
-    .then(json => renderTemplate({ gists: json }));
+  const resp = await fetch(url)
+  const json = await resp.json()
+  renderTemplate({ gists: json })
 }
