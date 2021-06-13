@@ -26,8 +26,8 @@ const app = createApp({
       return `${this.profileUrl}/${REPO_NAME}`;
     },
     gistsUrl() {
-      return `https://gist.github.com/${this.profileUrl}`
-    }
+      return `https://gist.github.com/${this.profileUrl}`;
+    },
   },
   template: `
     <GitHubCorner :repoUrl="repoUrl"></GitHubCorner>

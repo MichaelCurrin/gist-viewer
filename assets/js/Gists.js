@@ -12,9 +12,9 @@ function gistsUrl(username, limit = 100) {
 }
 
 const Gists = {
-  name: 'Gists',
+  name: "Gists",
   props: {
-    username: { type: String, required: true }
+    username: { type: String, required: true },
   },
   data() {
     return {
@@ -25,7 +25,7 @@ const Gists = {
   },
   methods: {
     async fetchGists() {
-      const url = gistsUrl(this.username)
+      const url = gistsUrl(this.username);
 
       try {
         const resp = await fetch(url);
@@ -39,12 +39,12 @@ const Gists = {
       }
     },
     sortBy(field) {
-      this.gists.sort((a, b) => a[field] > b[field] ? 1 : -1);
-    }
+      this.gists.sort((a, b) => (a[field] > b[field] ? 1 : -1));
+    },
   },
   async mounted() {
-    await this.fetchGists()
-    this.sortBy('description')
+    await this.fetchGists();
+    this.sortBy("description");
   },
   template: `
     <section v-if="errored">
