@@ -41,10 +41,13 @@ const Gists = {
     sortBy(field) {
       this.gists.sort((a, b) => (a[field] > b[field] ? 1 : -1));
     },
+    async render() {
+      await this.fetchGists();
+      this.sortBy("description");
+    }
   },
   async mounted() {
-    await this.fetchGists();
-    this.sortBy("description");
+    this.render()
   },
   template: `
     <section>
