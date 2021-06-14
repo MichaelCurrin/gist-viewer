@@ -59,7 +59,7 @@ const Gists = {
       this.sortBy("description");
     },
   },
-  async mounted() {
+  mounted() {
     this.render();
   },
   template: `
@@ -69,7 +69,7 @@ const Gists = {
           <b>⚠️ Failed to fetch gists data.</b>
         </p>
         <p>
-          Check your network connection, that the GitHub username is valid, or if the API limit has been reached.</b>
+          Check your network connection, that the GitHub username is valid, or if the API limit has been reached.
         </p>
         <p>
           <i>{{ errorMsg }}</i>
