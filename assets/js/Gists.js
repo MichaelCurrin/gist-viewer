@@ -21,28 +21,41 @@ const Gists = {
       gists: null,
       loading: true,
       errored: false,
+      errorMsg: '',
     };
   },
   methods: {
-    async fetchGists() {
-      const url = gistsUrl(this.username);
-
+    async fetchGists(url) {
       try {
         const resp = await fetch(url);
+        if (!resp.ok) {
+          throw new Error(`${resp.status} ${resp.statusText}`)
+        }
         const gists = await resp.json();
         this.gists = gists;
       } catch (err) {
-        console.error(`Unable to fetch Gists API data. Error: ${err}`);
+        const msg = `Unable to fetch Gists API data. Error: ${err}`
+        console.error(msg);
         this.errored = true;
+        this.errorMsg = msg
       } finally {
         this.loading = false;
       }
     },
     sortBy(field) {
+      if (!this.gists) {
+        console.error('Nothing to sort')
+        return
+      }
       this.gists.sort((a, b) => (a[field] > b[field] ? 1 : -1));
     },
     async render() {
-      await this.fetchGists();
+      const url = gistsUrl(this.username);
+
+      console.debug(`Fetching gists: ${url}`)
+      await this.fetchGists(url);
+
+      console.debug('Sorting')
       this.sortBy("description");
     }
   },
@@ -51,13 +64,21 @@ const Gists = {
   },
   template: `
     <section>
-      <p v-if="errored">
-        Failed to fetch gists data - check your network connection and that the GitHub username is valid.
-      </p>
+      <div v-if="errored">
+        <p>
+          <b>⚠️ Failed to fetch gists data.</b>
+        </p>
+        <p>
+          Check your network connection, that the GitHub username is valid, or if the API limit has been reached.</b>
+        </p>
+        <p>
+          <i>{{ errorMsg }}</i>
+        </p>
+      </div>
 
       <div v-else>
         <p v-if="loading">
-          Loading...
+          ⏳ Loading...
         </p>
 
         <table v-else>
