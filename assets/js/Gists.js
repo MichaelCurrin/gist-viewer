@@ -47,51 +47,51 @@ const Gists = {
     this.sortBy("description");
   },
   template: `
-    <section v-if="errored">
-      <p>
+    <section>
+      <p v-if="errored">
         Failed to fetch gists data - check your network connection and that the GitHub username is valid.
       </p>
+
+      <div v-else>
+        <p v-if="loading">
+          Loading...
+        </p>
+
+        <table v-else>
+          <tr>
+            <th>
+              Created
+            </th>
+            <th>
+              Updated
+            </th>
+            <th>
+              Description
+            </th>
+            <th>
+              Files
+            </th>
+
+          </tr>
+          <tr v-for="gist in gists">
+              <td>
+                {{ gist.created_at.slice(0, 10) }}
+              </td>
+              <td>
+              {{ gist.updated_at.slice(0, 10) }}
+              </td>
+              <td>
+                <a :href="gist.html_url">
+                  {{ gist.description }}
+                </a>
+              </td>
+              <td>
+                {{ Object.keys(gist.files).length }}
+              </td>
+          </tr>
+        </table>
+      </div>
     </section>
-
-    <ul v-else>
-      <p v-if="loading">
-        Loading...
-      </p>
-
-      <table v-else >
-        <tr>
-          <th>
-            Created
-          </th>
-          <th>
-            Updated
-          </th>
-          <th>
-            Description
-          </th>
-          <th>
-            Files
-          </th>
-
-        </tr>
-        <tr v-for="gist in gists">
-            <td>
-              {{ gist.created_at.slice(0, 10) }}
-            </td>
-            <td>
-            {{ gist.updated_at.slice(0, 10) }}
-            </td>
-            <td>
-              <a :href="gist.html_url">
-                {{ gist.description }}
-              </a>
-            </td>
-            <td>
-              {{ Object.keys(gist.files).length }}
-            </td>
-        </tr>
-      </table>
-    </ul>
   `,
 };
 
