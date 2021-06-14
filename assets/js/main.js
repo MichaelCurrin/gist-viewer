@@ -33,11 +33,13 @@ const app = createApp({
     <GitHubCorner :repoUrl="repoUrl"></GitHubCorner>
 
     <h2>User links</h2>
-    <p>Username: <b>@{{ username }}</b></p>
     <p>
-      View <a :href="profileUrl">Profile</a>
+      Username: <b>@{{ username }}</b>
+    </p>
+    <p>
+      <a :href="profileUrl">Profile</a>
       |
-      View <a :href="gistsUrl">Gists</a>
+      <a :href="gistsUrl">Gists</a>
     </p>
 
     <h2>List of Gists</h2>
