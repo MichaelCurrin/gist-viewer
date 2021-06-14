@@ -83,26 +83,20 @@ const Gists = {
         <table v-else>
           <tr>
             <th>
-              Created
-            </th>
-            <th>
-              Updated
-            </th>
-            <th>
               Description
             </th>
             <th>
               Files
             </th>
+            <th>
+              Updated
+            </th>
+            <th>
+              Created
+            </th>
 
           </tr>
           <tr v-for="gist in gists">
-              <td>
-                {{ gist.created_at.slice(0, 10) }}
-              </td>
-              <td>
-              {{ gist.updated_at.slice(0, 10) }}
-              </td>
               <td>
                 <a :href="gist.html_url">
                   {{ gist.description }}
@@ -110,6 +104,12 @@ const Gists = {
               </td>
               <td>
                 {{ Object.keys(gist.files).length }}
+              </td>
+              <td>
+                {{ gist.updated_at.slice(0, 10) }}
+              </td>
+              <td>
+                {{ gist.created_at.slice(0, 10) }}
               </td>
           </tr>
         </table>
