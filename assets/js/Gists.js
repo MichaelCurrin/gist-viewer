@@ -36,6 +36,7 @@ const Gists = {
       } catch (err) {
         const msg = `Unable to fetch Gists API data. Error: ${err}`;
         console.error(msg);
+        this.gists = null;
         this.errored = true;
         this.errorMsg = msg;
       } finally {
@@ -44,7 +45,6 @@ const Gists = {
     },
     sortBy(field) {
       if (!this.gists) {
-        console.error("Nothing to sort");
         return;
       }
       this.gists.sort((a, b) => (a[field] > b[field] ? 1 : -1));
@@ -55,7 +55,6 @@ const Gists = {
       console.debug(`Fetching gists: ${url}`);
       await this.fetchGists(url);
 
-      console.debug("Sorting");
       this.sortBy("description");
     },
   },
@@ -69,11 +68,11 @@ const Gists = {
           <b>⚠️ Failed to fetch gists data.</b>
         </p>
         <p>
-          Check your network connection, that the GitHub username is valid, or if the API limit has been reached.
-        </p>
-        <p>
           <i>{{ errorMsg }}</i>
         </p>
+        <p>
+          Tip - check your network connection, that the GitHub username is valid, or if the API limit has been reached.
+      </p>
       </div>
 
       <div v-else>
