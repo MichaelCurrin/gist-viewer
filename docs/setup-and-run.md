@@ -4,7 +4,7 @@
 
 Clone the repo.
 
-You don't need Node to use a web app. Just a static server.
+You don't need Node to use a web app. Just a static server, as below.
 
 
 ## Serve
