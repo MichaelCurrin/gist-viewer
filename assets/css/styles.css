@@ -7,7 +7,6 @@
   --pale: #f8f8f8;
 }
 
-
 body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -57,7 +56,6 @@ table span {
 tr:nth-child(even) {
   background-color: var(--pale);
 }
-
 
 table {
   width: 100%;
