@@ -7,9 +7,6 @@
   --pale: #f8f8f8;
 }
 
-.github-corner > svg {
-  fill: var(--highlight) !important;
-}
 
 body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -25,8 +22,16 @@ h3 {
   color: var(--secondary);
 }
 
+a {
+  color: var(--highlight);
+}
+
 header {
   text-align: center;
+}
+
+.github-corner>svg {
+  fill: var(--highlight) !important;
 }
 
 main {
@@ -45,10 +50,15 @@ td {
   padding: 10px;
 }
 
+table span {
+  display: inline-block;
+}
+
 tr:nth-child(even) {
   background-color: var(--pale);
 }
 
-a {
-  color: var(--highlight);
+
+table {
+  width: 100%;
 }
