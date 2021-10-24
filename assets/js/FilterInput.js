@@ -9,7 +9,7 @@ const FilterInput = {
   template: `
     <div>
       <label for="filter-input">
-        Search Gist titles:
+        Search descriptions:
       </label>
 
       <input :value="modelValue" @input="$emit('update:modelValue', $event.target.value)">
