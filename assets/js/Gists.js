@@ -73,7 +73,7 @@ const Gists = {
         throw new Error(`Expected value as string but got: ${typeof value}`);
       }
 
-      return value.toLowerCase().indexOf(filter) !== -1;
+      return value.toLowerCase().indexOf(filter.toLowerCase()) !== -1;
     },
   },
   mounted() {
