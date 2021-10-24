@@ -66,15 +66,15 @@ const Gists = {
       this.sortBy("description");
     },
     contains(value, filter) {
-      if (filter === '') {
-        return true
+      if (filter === "") {
+        return true;
       }
-      if (typeof value !== 'string') {
-        throw new Error(`Expected value as string but got: ${typeof value}`)
+      if (typeof value !== "string") {
+        throw new Error(`Expected value as string but got: ${typeof value}`);
       }
 
-      return value.toLowerCase().indexOf(filter) !== -1
-    }
+      return value.toLowerCase().indexOf(filter) !== -1;
+    },
   },
   mounted() {
     this.render();

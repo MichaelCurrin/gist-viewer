@@ -18,7 +18,7 @@ const app = createApp({
   data() {
     return {
       username: USERNAME,
-      filter: '',
+      filter: "",
     };
   },
   computed: {
