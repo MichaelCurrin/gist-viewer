@@ -2,6 +2,7 @@
  * Main app module.
  */
 import { createApp } from "https://unpkg.com/vue@3.0.7/dist/vue.esm-browser.js";
+import FilterInput from "./FilterInput.js";
 import Gists from "./Gists.js";
 import GitHubCorner from "./GitHubCorner.js";
 
@@ -12,10 +13,12 @@ const app = createApp({
   components: {
     Gists,
     GitHubCorner,
+    FilterInput,
   },
   data() {
     return {
       username: USERNAME,
+      filter: '',
     };
   },
   computed: {
@@ -43,10 +46,16 @@ const app = createApp({
     </p>
 
     <h2>List of Gists</h2>
+
     <p>
-      <i>Every time you load or refresh this page, the latest info will be pulled in.</i>
+      <i>Every time you load this page, the latest Gist details will be pulled in.</i>
     </p>
-    <Gists id="gists-widget" :username="username"></Gists>
+
+    <FilterInput v-model="filter"></FilterInput>
+
+    <br>
+
+    <Gists id="gists-widget" :username="username" :filter="filter"></Gists>
   `,
 });
 
