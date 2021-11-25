@@ -7,12 +7,12 @@
  */
 
 /**
- * Build API URL for getting all gists for a user.
+ * Create API URL for getting all gists for a user.
  *
  * The API sets a max of up to 100 items per page. This can be overcome by
  * extending this with paging, if you have over 100 gists.
  */
-function gistsUrl(username, limit = 100) {
+function gistsApiUrl(username, limit = 100) {
   return `https://api.github.com/users/${username}/gists?per_page=${limit}`;
 }
 
@@ -20,7 +20,7 @@ async function requestJson(url) {
   const resp = await fetch(url);
   if (!resp.ok) {
     throw new Error(
-      `Request failed - ${resp.status} ${resp.statusText} - ${url}`
+      `HTTP error: ${resp.status} - ${resp.statusText} URL: ${url}`
     );
   }
 
@@ -63,7 +63,7 @@ const Gists = {
       this.gists.sort((a, b) => (a[field] > b[field] ? 1 : -1));
     },
     async render() {
-      const url = gistsUrl(this.username);
+      const url = gistsApiUrl(this.username);
 
       console.debug(`Fetching gists: ${url}`);
       await this.renderGists(url);
