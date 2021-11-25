@@ -16,6 +16,15 @@ function gistsUrl(username, limit = 100) {
   return `https://api.github.com/users/${username}/gists?per_page=${limit}`;
 }
 
+async function requestJson(url) {
+  const resp = await fetch(url);
+  if (!resp.ok) {
+    throw new Error(`${resp.status} ${resp.statusText}`);
+  }
+
+  return resp.json();
+}
+
 const Gists = {
   name: "Gists",
   props: {
@@ -31,15 +40,9 @@ const Gists = {
     };
   },
   methods: {
-    async fetchGists(url) {
+    async renderGists(url) {
       try {
-        const resp = await fetch(url);
-        if (!resp.ok) {
-          throw new Error(`${resp.status} ${resp.statusText}`);
-        }
-
-        const gists = await resp.json();
-        this.gists = gists;
+        this.gists = await requestJson(url);
       } catch (err) {
         const msg = `Unable to fetch Gists API data. Error: ${err}`;
         console.error(msg);
@@ -61,7 +64,7 @@ const Gists = {
       const url = gistsUrl(this.username);
 
       console.debug(`Fetching gists: ${url}`);
-      await this.fetchGists(url);
+      await this.renderGists(url);
 
       this.sortBy("description");
     },
