@@ -18,13 +18,13 @@ There are no dependencies need - not even Node.
 You can choose whatever option you want in the next section.
 
 
-## Serve
+## Usage
 
 Start a dev server in the repo root. See [Start a dev server](https://gist.github.com/MichaelCurrin/1a6116a4e0918c8468dc7e1a701a5f95) guide for ideas.
 
 Example using Node, `npx`, and `sirv` (a lightweight static server):
 
-1. Start dev server
+1. Start dev server.
     ```sh
     $ npx sirv
     ```
