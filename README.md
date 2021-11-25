@@ -14,7 +14,7 @@
 
 <div align="center">
     <a href="https://michaelcurrin.github.io/gist-viewer/">
-        <img src="/sample.png" alt="Sample screenshot" title="Sample screenshot" width="500" />
+        <img src="/sample.png" alt="Sample screenshot" title="Go to web app" width="500" />
     </a>
 </div>
 
@@ -23,7 +23,7 @@
 
 <div align="center">
 
-[![View site GH Pages](https://img.shields.io/badge/View_site-Gist_Viewer-2ea44f?style=for-the-badge)](https://michaelcurrin.github.io/gist-viewer/)
+[![View site GH Pages](https://img.shields.io/badge/View_site-Gist_Viewer-2ea44f?style=for-the-badge)](https://michaelcurrin.github.io/gist-viewer/ "Go to web app")
 
 </div>
 
@@ -32,7 +32,7 @@
 
 <div align="center">
 
-[![View - Documentation](https://img.shields.io/badge/View-Documentation-blue?style=for-the-badge)](/docs/)
+[![View - Documentation](https://img.shields.io/badge/View-Documentation-blue?style=for-the-badge)](/docs/ "Go to docs")
 
 </div>
 
