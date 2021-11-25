@@ -26,7 +26,7 @@ Example using Node, `npx`, and `sirv` (a lightweight static server):
 
 1. Start dev server.
     ```sh
-    $ npx sirv
+    $ npx sirv-cli
     ```
 1. Open in the browser:
     - http://localhost:5000
