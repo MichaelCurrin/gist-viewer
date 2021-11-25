@@ -55,7 +55,7 @@ const Gists = {
       }
     },
     sortBy(field) {
-      if (!this.gists) {
+      if (this.gists === null) {
         return;
       }
       this.gists.sort((a, b) => (a[field] > b[field] ? 1 : -1));
