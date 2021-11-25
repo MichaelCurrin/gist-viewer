@@ -19,7 +19,7 @@ function gistsUrl(username, limit = 100) {
 async function requestJson(url) {
   const resp = await fetch(url);
   if (!resp.ok) {
-    throw new Error(`${resp.status} ${resp.statusText}`);
+    throw new Error(`Request failed - ${resp.status} ${resp.statusText} - ${url}`);
   }
 
   return resp.json();
