@@ -1,0 +1,16 @@
+{
+  "name": "gist-viewer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sirv"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@webcontainer/api": "^1.1.8",
+    "sirv-cli": "^2.0.2"
+  }
+}

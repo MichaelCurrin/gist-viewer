@@ -1,0 +1,16 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  '@webcontainer/api':
+    specifier: ^1.1.8
+    version: 1.1.8
+
+packages:
+
+  /@webcontainer/api@1.1.8:
+    resolution: {integrity: sha512-m9WRj38oCoFPrqZOTeJcncPjnZ00FZUMq9YHEXxdhAoYhhQ69Rz4qK5p444cIPaMy2j8H7HcNLcAIwMGWnpMpw==}
+    dev: false
